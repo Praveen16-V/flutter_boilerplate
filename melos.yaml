@@ -1,0 +1,85 @@
+name: flutter_boilerplate
+repository: https://github.com/yourusername/flutter_boilerplate
+packages:
+  - .
+
+command:
+  bootstrap:
+    runPubGetInParallel: false
+
+scripts:
+  # Run commands
+  start:android:
+    run: flutter run -d CPH2649
+    description: Run app on Android
+    exec:
+      concurrency: 1
+
+  start:ios:
+    run: flutter run -d ios
+    description: Run app on iOS
+    exec:
+      concurrency: 1
+
+  start:web:
+    run: flutter run -d chrome
+    description: Run app on Web (Chrome)
+    exec:
+      concurrency: 1
+
+  start:windows:
+    run: flutter run -d windows
+    description: Run app on Windows
+    exec:
+      concurrency: 1
+
+  start:macos:
+    run: flutter run -d macos
+    description: Run app on macOS
+    exec:
+      concurrency: 1
+
+  start:linux:
+    run: flutter run -d linux
+    description: Run app on Linux
+    exec:
+      concurrency: 1
+
+  # Build commands
+  build:android:
+    run: flutter build apk
+    description: Build Android APK
+
+  build:android:appbundle:
+    run: flutter build appbundle
+    description: Build Android App Bundle
+
+  build:ios:
+    run: flutter build ios
+    description: Build iOS
+
+  build:web:
+    run: flutter build web
+    description: Build Web
+
+  build:windows:
+    run: flutter build windows
+    description: Build Windows
+
+  build:macos:
+    run: flutter build macos
+    description: Build macOS
+
+  build:linux:
+    run: flutter build linux
+    description: Build Linux
+
+  # Clean command
+  clean:
+    run: flutter clean
+    description: Clean build artifacts
+
+  # Get dependencies
+  get:
+    run: flutter pub get
+    description: Get dependencies
